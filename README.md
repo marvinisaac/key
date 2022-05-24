@@ -26,3 +26,16 @@
 6. Verify that it is working
 
     `ssh -T github.com`
+
+## Optional Commands
+- Re-create public key
+
+    `ssh-keygen -y -f ~/.ssh/key > ~/.ssh/key.pub`
+
+- Encrypt a file using `key`
+
+    `gpg --batch --passphrase-file {key location} -c {file to encrypt}`
+
+- Decrypt a file with `key`
+
+    `gpg --batch --passphrase-file {key location} {file to decrypt}`
