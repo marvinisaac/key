@@ -32,6 +32,13 @@
 
     `ssh-keygen -y -f ~/.ssh/key > ~/.ssh/key.pub`
 
+- Fit key in a single line
+
+    ```
+    cp ~/.ssh/key ~/.ssh/gpg-key && \
+        echo $(tr -d '\n' < ~/.ssh/gpg-key) > ~/.ssh/gpg-key
+    ```
+
 - Encrypt a file using `key`
 
     `gpg --batch --passphrase-file {key location} -c {file to encrypt}`
