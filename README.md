@@ -1,21 +1,14 @@
 # Key
 
 ## How to (Personally) Use
-1. Clone the repo
+1. Clone the repo `git clone https://github.com/marvinisaac/key.git`
 
-    `git clone https://github.com/marvinisaac/key.git`
-
-2. Setup key for usage
-
-    `cd key && ./setup`
+2. Setup key for usage `cd key && ./setup`
 
     > Hint: 46 Wong DVD's for you
 
-3. Confirm that it's working by checking that the message
-    ```
-    Hi marvinisaac! You've successfully authenticated, but GitHub does not provide shell access.
-    ```
-    is printed out.
+3. Confirm that it's working by checking that the following message is printed out.
+    > Hi marvinisaac! You've successfully authenticated, but GitHub does not provide shell access.
 
 ## Optional Commands
 - Re-create public key
