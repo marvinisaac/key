@@ -1,31 +1,21 @@
 # Key
 
-## How to Use
+## How to (Personally) Use
 1. Clone the repo
 
     `git clone https://github.com/marvinisaac/key.git`
 
-2. Decrypt key
+2. Setup key for usage
 
-    `gpg key.gpg`
+    `cd key && ./setup`
 
     > Hint: 46 Wong DVD's for you
 
-3. Copy created `key` file to SSH folder
-
-    `cp key ~/.ssh`
-
-4. Set proper permissions
-
-    `chmod 700 ~/.ssh/key`
-
-5. Copy and customize SSH config 
-
-    `cp config ~/.ssh`
-
-6. Verify that it is working
-
-    `ssh -T github.com`
+3. Confirm that it's working by checking that the message
+    ```
+    Hi marvinisaac! You've successfully authenticated, but GitHub does not provide shell access.
+    ```
+    is printed out.
 
 ## Optional Commands
 - Re-create public key

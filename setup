@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Decrypt key
+gpg key.gpg
+
+# Move key and set permission
+mv key ~/.ssh/key
+chmod 700 ~/.ssh/key
+
+# Copy SSH config
+cp config ~/.ssh
+
+# Create a single line version to be used as symmetric encryption key
+cp ~/.ssh/key ~/.ssh/gpg-key && \
+    echo $(tr -d '\n' < ~/.ssh/gpg-key) > ~/.ssh/gpg-key
+
+# Test connection to GitHub
+ssh -T github.com
